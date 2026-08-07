@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>びゃんだああああ</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ローディング -->
+    <div id="loading-screen">
+
+        <img src="img/int.png" class="heart">
+
+        <p class="loading-text">
+            Loading...
+        </p>
+
+    </div>
+    <button id="menu-btn">
+        <img src="img/wing-heart4.PNG" alt="menu">
+    </button>
+    <nav id="menu">
+
+        <a href="#">めにゅー</a>
+        <a href="#">めにゅー</a>
+        <a href="#">めにゅー</a>
+        <a href="#">めにゅー</a>
+
+    </nav>
+
+
+
+
+    <!-- メイン -->
+    <main id="main-content">
+
+        <header class="first-view">
+            <div class="bg active"></div>
+            <div class="bg"></div>
+            <div class="bg"></div>
+
+            <!-- メニュー -->
+
+        </header>
+
+
+        <section class="first-view">
+
+            <div class="dark-overlay"></div>
+
+            <!-- 背景 -->
+            <div class="bg active"></div>
+
+            <!-- ロゴなど -->
+
+
+            ...
+
+
+        </section>
+        <style>
+            /* 全てのリセットと高さの確保 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                /* 万が一の時の背景色 */
+            }
+
+            /* 1. ファーストビュー：背面固定 */
+            #first-view {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 1;
+                /* z-indexをプラスにして最背面に配置 */
+            }
+
+
+            /* 2. 下のセクション：上に被さるレイヤー */
+            #second-section {
+                position: relative;
+                z-index: 2;
+                /* ファーストビュー（1）より上に重ねる */
+
+                /* ファーストビューの高さ分、最初から下に下げる */
+                margin-top: 590vh;
+                height: 300vh;
+
+
+
+
+                width: 100%;
+                min-height: 100vh;
+                padding: 100px 20px;
+            }
+
+            #second-section h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+        </style>
+        </head>
+
+        <body>
+
+            <!-- 下のセクション（スクロールで被さる） -->
+            <section id="second-section">
+                <div class="logo"><img src="img/logo.png" alt="" width="100%"></div>
+
+            </section>
+
+            <section id="third-section">
+                <div class="stb">
+                    <img src="img/stb.png" width="107px">
+                </div>
+
+                <section class="profile-section reveal">
+                    <div class="profile-wrap">
+
+                        <div class="profile-card-bg">
+                            <img src="img/prof.gif" class="prof" alt="プロフィール画像">
+                            <img src="img/name-back2.png" class="profile-bg" width="60%" alt="プロフィール背景">
+                            <img src="img/back-h3.PNG" class="profile-bg2" width="100%" alt="プロフィール背景">
+
+                        </div>
+
+
+                        <h2>
+                            びゃんびゃん
+                        </h2>
+
+
+                        <p class="sub">
+                            ByanByan
+                        </p>
+
+
+                        <p class="intro">
+
+                            やっほーやっっっとやる気出たので作りました
+
+
+                        <section class="love-section reveal">
+
+                            <img src="img/stf.png" width="40%">
+
+                            <div class="love-container">
+
+                                <div class="love-card">
+
+                                    <img src="img/icon3.png" alt="">
+
+                                    <h3>Draw</h3>
+
+                                </div>
+
+                                <div class="love-card">
+
+                                    <img src="img/icon1.png" alt="">
+
+                                    <h3>Music</h3>
+
+                                </div>
+
+                                <div class="love-card">
+
+                                    <img src="img/icon2.png" alt="">
+
+                                    <h3>Work out</h3>
+                                </div>
+
+                            </div>
+
+                        </section>
+                    </div>
+
+
+
+                </section>
+
+
+
+                <!-- SNS -->
+
+                <section class="sns-section">
+
+
+
+
+
+                    <section class="activity reveal">
+                        <img src="img/sta2.png" width="107px">
+
+
+                        <div class="activity-slider">
+
+                            <a href="https://x.com/" class="activity-card">
+
+                                <img src="img/x1.jpg">
+
+                                <h3>サブ垢</h3>
+
+                                <p>
+                                    イラストに関係ないこと呟こうとしてる垢
+                                    あんまできてない
+                                </p>
+
+                            </a>
+
+                            <a href="https://x.com/〇〇" class="activity-card">
+
+                                <img src="img/f-2.PNG">
+
+                                <h3>交流垢🗝️</h3>
+
+                                <p>
+                                    相互さんと仲良くなる垢
+                                    （相互さんのみ通してます）
+                                </p>
+
+                            </a>
+
+                            <a href="https://x.com/〇〇" class="activity-card">
+
+                                <img src="img/x3.jpg">
+
+                                <h3>Skeb垢</h3>
+
+                                <p>
+                                    Skebの作品を載せる垢
+
+                                </p>
+
+                            </a>
+                            <a href="https://x.com/〇〇" class="activity-card">
+
+                                <img src="img/x4.jpg">
+
+                                <h3>もっと創作垢🗝️</h3>
+
+                                <p>
+                                    OC創作語る垢
+                                </p>
+
+                            </a>
+
+
+
+
+                        </div>
+                        <section class="cta-section reveal">
+
+                            <div class="cta-card">
+                                <img src="img/wh2.PNG" width="100px" id="wh">
+
+                                <img src="img/sts.png" width="147px" id="sts">
+
+                                <p>
+
+                                    OCのみ受けてます!
+
+                                    <br>
+                                <div class="status closed">
+                                    <!--status closed-->
+
+                                    <span class="dot"></span>
+
+                                    REQUEST OPEN
+
+                                </div>
+                                <a href="https://skeb.jp/〇〇" target="_blank" class="cta-btn">
+
+                                    こちら
+
+                                </a>
+
+                            </div>
+
+                        </section>
+
+                    </section>
+                </section>
+
+            </section>
+
+
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
