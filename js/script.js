@@ -40,12 +40,11 @@ btn.addEventListener("click", () => {
     menu.classList.toggle("active");
 
 });
-const slides = document.querySelectorAll(".bg");
+const slides = document.querySelectorAll(".first-view .bg");
 
 let current = 0;
 
 setInterval(() => {
-
     slides[current].classList.remove("active");
 
     current++;
@@ -55,7 +54,6 @@ setInterval(() => {
     }
 
     slides[current].classList.add("active");
-
 }, 5000);
 
 document.addEventListener(

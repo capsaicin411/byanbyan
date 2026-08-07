@@ -27,25 +27,17 @@
         translateY(0) scale(1);
 }
 
-.dark-overlay {
-
+.first-view .dark-overlay {
     position: absolute;
-
     inset: 0;
 
-    background: black;
-
+    background: #000;
     opacity: 0;
 
     pointer-events: none;
+    z-index: 1;
 
-    z-index: 2;
-
-    transition: .1s;
-}
-
-.dark-overlay {
-    z-index: 2;
+    transition: opacity .1s linear;
 }
 
 
@@ -180,14 +172,17 @@ body {
 /* ファーストビュー全体を画面の最背面にガッチリ固定します */
 .first-view {
     position: fixed;
-    /* stickyからfixedに変更 */
+    inset: 0;
 
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    height: 100dvh;
+    min-height: 100svh;
 
+    overflow: hidden;
     z-index: 1;
-    /* メニュー(999)やローディング(9999)より下に配置 */
+    isolation: isolate;
+    background: #000;
 }
 
 /* 中のコンテンツ中央揃えを維持するためのラッパー */
@@ -203,13 +198,23 @@ body {
 .bg {
     position: absolute;
     inset: 0;
+
+    width: 100%;
+    height: 100%;
+
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+
     opacity: 0;
     transition: opacity 2s ease;
-    z-index: -1;
-    /* 文字の後ろに背景画像を配置 */
 
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg.active {
+    opacity: 1;
 }
 
 .bg3 {
@@ -876,4 +881,21 @@ p {
 
 footer {
     height: 500px;
+}
+
+@media (max-width: 768px) {
+    .first-view {
+        height: 100vh;
+        height: 100dvh;
+        min-height: 100svh;
+    }
+
+    .first-view .bg {
+        min-height: 100%;
+    }
+
+    #second-section,
+    #third-section {
+        background: transparent;
+    }
 }
