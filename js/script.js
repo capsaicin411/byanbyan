@@ -157,3 +157,28 @@ window.addEventListener(
 
 revealSection();
 
+// ========================================
+// イントロ表示中スクロールできなくなる
+// ========================================
+
+document.body.classList.add("intro-active");
+
+window.addEventListener("load", () => {
+
+    const loadingScreen = document.getElementById("loading-screen");
+
+    setTimeout(() => {
+
+        loadingScreen.style.opacity = "0";
+
+        setTimeout(() => {
+
+            loadingScreen.style.display = "none";
+            document.body.classList.remove("intro-active");
+
+        }, 1000);
+
+    }, 2000);
+
+});
+
