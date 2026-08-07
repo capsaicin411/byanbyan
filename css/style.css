@@ -166,10 +166,10 @@ body {
 
 
 /* ========================================================
-   メイン・ファーストビュー（ここをパララックス用に修正しました）
+   メイン・ファーストビュー
    ======================================================== */
 
-/* ファーストビュー全体を画面の最背面にガッチリ固定します */
+/* 背景画像はページ全体の一番奥で固定 */
 .first-view {
     position: fixed;
     inset: 0;
@@ -180,21 +180,26 @@ body {
     min-height: 100svh;
 
     overflow: hidden;
-    z-index: 1;
-    isolation: isolate;
+
+    z-index: 0;
     background: #000;
+    isolation: isolate;
 }
 
-/* 中のコンテンツ中央揃えを維持するためのラッパー */
+/* main は背景の上を普通にスクロールする */
 #main-content {
-    height: 100%;
+    position: relative;
+    z-index: 2;
+
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+
+    display: block;
+
+    background: transparent;
 }
 
+/* 背景画像 */
 .bg {
     position: absolute;
     inset: 0;
@@ -217,12 +222,18 @@ body {
     opacity: 1;
 }
 
-.bg3 {
-    z-index: 1;
-}
+/* スクロールしても背景画像が見えるように透明 */
+#second-section {
+    position: relative;
+    z-index: 2;
 
-.bg.active {
-    opacity: 1;
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 100px 20px;
+
+    background: transparent;
 }
 
 /* 画像指定 */
@@ -284,13 +295,10 @@ p {
     position: relative;
     z-index: 3;
 
+    width: 100%;
     margin: 0;
 
-
-
-    width: 100%;
-
-
+    background: transparent;
 }
 
 /* キラキラエフェクト */
@@ -885,17 +893,23 @@ footer {
 
 @media (max-width: 768px) {
     .first-view {
+        inset: 0;
+        width: 100%;
         height: 100vh;
         height: 100dvh;
         min-height: 100svh;
     }
 
     .first-view .bg {
+        width: 100%;
+        height: 100%;
         min-height: 100%;
     }
 
+    #main-content,
     #second-section,
     #third-section {
+        width: 100%;
         background: transparent;
     }
 }
