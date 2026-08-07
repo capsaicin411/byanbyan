@@ -45,7 +45,7 @@
 
 body {
     font-family: sans-serif;
-    background: #fff5fa;
+    background: #000000;
     /* 【修正】全体のスクロールを許可し、横スクロールだけを禁止にします */
     overflow-x: hidden;
     overflow-y: auto;
