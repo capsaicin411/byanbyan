@@ -1,32 +1,111 @@
+// ========================================
+// イントロ・ローディング
+// ========================================
+
+let introFinished = false;
+
+// イントロ開始
+document.documentElement.style.overflow = "hidden";
+document.body.style.overflow = "hidden";
+
+
+// PC：マウスホイールを完全に無効化
+function preventIntroScroll(e) {
+    if (!introFinished) {
+        e.preventDefault();
+    }
+}
+
+window.addEventListener("wheel", preventIntroScroll, {
+    passive: false
+});
+
+
+// スマホ：スワイプを完全に無効化
+function preventIntroTouch(e) {
+    if (!introFinished) {
+        e.preventDefault();
+    }
+}
+
+window.addEventListener("touchmove", preventIntroTouch, {
+    passive: false
+});
+
+
+// キーボードによるスクロールも無効化
+function preventIntroKey(e) {
+
+    if (!introFinished) {
+
+        const keys = [
+            "ArrowUp",
+            "ArrowDown",
+            "PageUp",
+            "PageDown",
+            "Home",
+            "End",
+            " "
+        ];
+
+        if (keys.includes(e.key)) {
+            e.preventDefault();
+        }
+
+    }
+
+}
+
+window.addEventListener("keydown", preventIntroKey);
+
+
 window.addEventListener("load", () => {
 
     setTimeout(() => {
 
         const loading =
-            document.getElementById(
-                "loading-screen"
-            );
+            document.getElementById("loading-screen");
 
+        // イントロをフェードアウト
         loading.style.opacity = "0";
+
 
         setTimeout(() => {
 
-            loading.style.display =
-                "none";
+            // イントロを完全に消す
+            loading.style.display = "none";
+
+
+            // メニューボタンを表示
             document
                 .getElementById("menu-btn")
                 .style.opacity = "1";
 
-            document
-                .querySelector(".logo")
-                .classList.add("show");
 
-            document.body.style.overflow =
-                "auto";
+            // ロゴを表示
+            const logo =
+                document.querySelector(".logo");
+
+            if (logo) {
+                logo.classList.add("show");
+            }
+
+
+            // ========================================
+            // イントロ終了
+            // ========================================
+
+            introFinished = true;
+
+            // スクロール解禁
+            document.documentElement.style.overflow = "";
+            document.body.style.overflow = "";
+
 
         }, 1000);
 
     }, 3000);
+
 
 });
 const btn =
@@ -157,28 +236,5 @@ window.addEventListener(
 
 revealSection();
 
-// ========================================
-// イントロ表示中スクロールできなくなる
-// ========================================
 
-document.body.classList.add("intro-active");
-
-window.addEventListener("load", () => {
-
-    const loadingScreen = document.getElementById("loading-screen");
-
-    setTimeout(() => {
-
-        loadingScreen.style.opacity = "0";
-
-        setTimeout(() => {
-
-            loadingScreen.style.display = "none";
-            document.body.classList.remove("intro-active");
-
-        }, 1000);
-
-    }, 2000);
-
-});
 
