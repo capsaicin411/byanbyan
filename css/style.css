@@ -464,7 +464,7 @@ p {
 .sns-section {
 
     padding: 100px 20px;
-    margin-top: 520px;
+    margin-top: 480px;
     height: 500px;
 
 
@@ -587,6 +587,7 @@ p {
 
     scroll-snap-type: x mandatory;
 
+
 }
 
 .activity-slider::-webkit-scrollbar {
@@ -599,7 +600,7 @@ p {
 
     flex: 0 0 240px;
 
-    background: rgb(252, 252, 252);
+    background: #ff60d7;
 
     border-radius: 15px;
 
@@ -615,9 +616,26 @@ p {
     scroll-snap-align: center;
 
     transition: .3s;
+    margin-bottom: 5px;
 
 
 
+
+
+}
+
+.acti-t {
+    display: flex;
+    margin-top: 5px;
+
+}
+
+.acti-t h5 {
+
+    color: #ffffff;
+    text-shadow: 0 0 8px #f690e8, 0 0 15px #ffedfd;
+    margin-left: 5px;
+    margin-top: 24px;
 }
 
 .activity-card:hover {
@@ -630,7 +648,7 @@ p {
 
     width: 100%;
 
-    height: 150px;
+    height: 190px;
 
     object-fit: cover;
 
@@ -641,26 +659,36 @@ p {
     color: #fffeff;
 
 
-    margin: 10px 0 0 20px;
+
+    margin: 0 0 0 20px;
     font-size: 50px;
     text-align: left;
-    text-shadow: 0 0 8px #ff83ee, 0 0 15px #ffedfd;
+    text-shadow: 0 0 8px #f5c2ee, 0 0 15px #ffedfd;
     font-family: 'DIN Condensed', 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
 
 }
 
 .activity-card p {
 
-    margin: 0 20px 30px 20px;
+    margin: 0 20px 5px 20px;
 
-    color: #000000;
-
+    color: #fefdfd;
 
 
     line-height: 1.5;
     font-size: 12px;
     text-align: left;
+    transform: translateY(-11px);
 
+
+}
+
+.activity-card:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.activity-card:nth-child(even) {
+    transform: rotate(2deg);
 }
 
 .reveal {
@@ -703,7 +731,9 @@ p {
     text-align: center;
 
     border-radius: 20px;
-    border: #ff91de solid 2px;
+    background-image: url(../img/ssa.png);
+    background-size: 230px;
+    background-repeat: no-repeat;
 
 
 
@@ -738,13 +768,13 @@ p {
 
     padding: 10px 40px;
 
-    border: 2px solid #ff8fc7;
+    border: 2px solid #ff8fe7;
 
     border-radius: 999px;
 
     text-decoration: none;
 
-    color: #ff8edb;
+    color: #ff8ee5;
 
     background: transparent;
 
@@ -753,7 +783,7 @@ p {
 
 .cta-btn:hover {
 
-    background: #ff8fc7;
+    background: #ff8ee5;
 
     color: white;
 
@@ -836,7 +866,8 @@ p {
 }
 
 footer {
-    height: 500px;
+    height: 400px;
+    z-index: 9999;
 }
 
 @media (max-width: 768px) {
@@ -866,4 +897,72 @@ body.intro-active {
     overflow: hidden;
     height: 100vh;
     height: 100dvh;
+}
+
+.sticker {
+
+
+
+    position: absolute;
+
+    top: -80px;
+
+    right: 50px;
+
+    z-index: 10;
+
+
+    animation: stickerFloat 5s ease-in-out infinite;
+
+
+}
+
+
+
+.sticker1 {
+    top: -20px;
+    left: 15%;
+}
+
+.sticker2 {
+    top: 200px;
+    right: 10%;
+    display: block;
+
+    transform: rotate(50deg);
+}
+
+.sticker3 {
+    bottom: -80px;
+    left: 70%;
+}
+
+.sticker {
+
+    animation:
+        stickerFloat 5s ease-in-out infinite;
+
+}
+
+.sticker img {
+
+    animation:
+        stickerFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes stickerFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
 }
