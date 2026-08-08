@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Osaka', sans-serif;
 }
 
 .logo {
@@ -242,19 +243,23 @@ body {
 }
 
 .bg:nth-child(2) {
-    background-image: url("../img/f-2.PNG");
+    background-image: url("../img/f-22.PNG");
 }
 
 .bg:nth-child(3) {
-    background-image: url("../img/f-3.PNG");
+    background-image: url("../img/f-31.PNG");
 }
 
 /* 文字 */
 h2 {
 
     color: #fbfbfb;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
+    font-family: 'DIN Condensed', 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 10px #ff65ea, 0 0 20px #ff00de;
 }
 
 p {
@@ -262,10 +267,15 @@ p {
 }
 
 .sub {
-    margin-top: 9px;
-    color: #d48cb3;
+
+    color: #ff85ed;
     position: relative;
+    font-size: 13px;
     z-index: 10;
+    top: -13px;
+    font-family: 'Osaka', sans-serif;
+
+
 }
 
 .menu {
@@ -587,7 +597,7 @@ p {
 
 .activity-card {
 
-    flex: 0 0 230px;
+    flex: 0 0 240px;
 
     background: rgb(252, 252, 252);
 
@@ -606,6 +616,8 @@ p {
 
     transition: .3s;
 
+
+
 }
 
 .activity-card:hover {
@@ -618,7 +630,7 @@ p {
 
     width: 100%;
 
-    height: 200px;
+    height: 150px;
 
     object-fit: cover;
 
@@ -626,24 +638,27 @@ p {
 
 .activity-card h3 {
 
-    color: #ff7cd6;
-    font-family: 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
+    color: #fffeff;
 
-    margin: 20px 0 2px 20px;
-    font-size: 20px;
+
+    margin: 10px 0 0 20px;
+    font-size: 50px;
     text-align: left;
+    text-shadow: 0 0 8px #ff83ee, 0 0 15px #ffedfd;
+    font-family: 'DIN Condensed', 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
 
 }
 
 .activity-card p {
 
-    padding: 0 20px 20px;
+    margin: 0 20px 30px 20px;
+
     color: #000000;
-    font-family: sans-serif;
 
 
-    line-height: 1.8;
-    font-size: 11px;
+
+    line-height: 1.5;
+    font-size: 12px;
     text-align: left;
 
 }
@@ -715,7 +730,6 @@ p {
 .cta-card>p {
     font-size: 12px;
     color: #ffffff;
-    font-family: 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
 }
 
 .cta-btn {
