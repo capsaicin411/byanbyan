@@ -971,30 +971,3 @@ body.intro-active {
     }
 
 }
-
-@media (max-width:768px) {
-
-
-    .profile-wrap {
-        width: 250px;
-        height: 250px;
-    }
-
-
-    .love-card {
-        width: 45%;
-    }
-
-    .activity-card {
-        flex: 0 0 220px;
-    }
-
-    .activity-card h3 {
-        font-size: 36px;
-    }
-
-    .cta-card {
-        max-width: 90%;
-    }
-
-}
