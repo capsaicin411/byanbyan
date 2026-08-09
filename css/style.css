@@ -557,7 +557,10 @@ p {
 
 .love-container {
     display: flex;
-    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
 }
 
 .activity {
