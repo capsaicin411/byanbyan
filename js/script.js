@@ -237,6 +237,44 @@ window.addEventListener(
 revealSection();
 
 
+document.addEventListener("click", (e) => {
+
+    // アイコンをクリック
+    const button = e.target.closest(".modal-btn");
+
+    if (button) {
+
+        const modalId = button.getAttribute("data-modal");
+        const modal = document.getElementById(modalId);
+
+        if (modal) {
+            modal.classList.add("show");
+        }
+
+        return;
+    }
 
 
+    // ×ボタンをクリック
+    const closeButton = e.target.closest(".close-btn");
 
+    if (closeButton) {
+
+        const modal = closeButton.closest(".modal");
+
+        if (modal) {
+            modal.classList.remove("show");
+        }
+
+        return;
+    }
+
+
+    // モーダルの背景をクリック
+    if (e.target.classList.contains("modal")) {
+
+        e.target.classList.remove("show");
+
+    }
+
+});

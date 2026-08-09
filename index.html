@@ -87,7 +87,8 @@
                         <div class="love-container">
 
                             <div class="love-card">
-                                <img src="img/icon3.png" alt="">
+                                <img src="img/icon3.png" alt="" lass="modal-btn" data-modal="profile-modal"
+                                    onclick="document.getElementById('profile-modal').classList.add('show')">
                                 <h3>DRAW</h3>
                             </div>
 
@@ -114,7 +115,7 @@
                     <img src="img/sta2.png" width="107px" alt="">
 
                     <div class="activity-slider">
-                        <a href="https://x.com/capsaicin_4=11" class="activity-card">
+                        <a href="https://x.com/capsaicin_4s=11" class="activity-card">
                             <img src="img/x0.PNG" alt="">
                             <div class="acti-t">
                                 <h3>MAIN</h3>
@@ -207,6 +208,21 @@
                 </section>
             </section>
         </section>
+        <div id="profile-modal" class="modal">
+
+            <div class="modal-content">
+
+                <button class="close-btn" onclick="this.closest('.modal').classList.remove('show')">×</button>
+
+                <h2></h2>
+
+                <p>
+                    なんもない
+                </p>
+
+            </div>
+
+        </div>
 
     </main>
 
