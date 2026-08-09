@@ -532,7 +532,7 @@ p {
 
 .love-card {
     margin: 2px 0;
-    width: 30%;
+    width: 27%;
 
 }
 
@@ -963,6 +963,36 @@ body.intro-active {
 
     100% {
         transform: translateY(0);
+    }
+
+}
+
+@media (max-width:768px) {
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .profile-wrap {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .love-card {
+        width: 45%;
+    }
+
+    .activity-card {
+        flex: 0 0 220px;
+    }
+
+    .activity-card h3 {
+        font-size: 36px;
+    }
+
+    .cta-card {
+        max-width: 90%;
     }
 
 }
