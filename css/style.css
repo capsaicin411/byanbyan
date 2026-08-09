@@ -258,7 +258,9 @@ body {
 h2 {
 
     color: #fbfbfb;
-    font-size: 50px;
+    font-size:
+
+        clamp(50px, 8vw, 70px);
     text-align: center;
     font-family: 'DIN Condensed', 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', sans-serif;
     margin: 0;
@@ -723,24 +725,38 @@ p {
 }
 
 
-.cta-card {
 
-    max-width: 230px;
+.cta-card {
+    width: 230px;
 
     height: 300px;
 
     margin: auto;
 
-    padding: 0 40px;
+    padding: 0 20px;
 
-    text-align: center;
+    background-size: contain;
 
-    border-radius: 20px;
-    background-image: url(../img/ssa.png);
-    background-size: 230px;
+    background-position: center;
+
     background-repeat: no-repeat;
 
+    background-image: url(../img/ssa.png);
 
+
+
+}
+
+@media (max-width:768px) {
+
+    .status {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
 
 }
 
