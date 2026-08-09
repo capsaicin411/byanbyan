@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Osaka', sans-serif;
+
 }
 
 .logo {
@@ -270,6 +270,7 @@ h2 {
 
 p {
     text-align: center;
+    font-family: 'Osaka', sans-serif;
 }
 
 .sub {
