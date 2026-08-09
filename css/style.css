@@ -519,16 +519,6 @@ p {
 
 }
 
-.love-section h2 {
-
-    font-size: 27px;
-
-    color: #fff;
-    text-align: center;
-
-    margin-bottom: 20px;
-
-}
 
 .love-card img {
 
@@ -555,7 +545,7 @@ p {
 .love-card h3 {
 
     color: #fff;
-    margin: 8px 0 5px 0;
+    margin: 5px 0;
     font-size: 13px;
 
 
@@ -567,7 +557,7 @@ p {
 
 .love-container {
     display: flex;
-    gap: 10px;
+    gap: 2px;
 }
 
 .activity {
