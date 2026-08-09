@@ -975,6 +975,10 @@ body.intro-active {
 @media (max-width:768px) {
 
 
+    .profile-wrap {
+        width: 250px;
+        height: 250px;
+    }
 
 
     .love-card {
@@ -987,6 +991,10 @@ body.intro-active {
 
     .activity-card h3 {
         font-size: 36px;
+    }
+
+    .cta-card {
+        max-width: 90%;
     }
 
 }
