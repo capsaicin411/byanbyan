@@ -241,17 +241,17 @@ body {
     background: transparent;
 }
 
-/* 画像指定 */
-.bg:nth-child(1) {
-    background-image: url("../img/f-girl.jpg");
-}
 
-.bg:nth-child(2) {
+.bg:nth-child(1) {
     background-image: url("../img/f-22.PNG");
 }
 
+.bg:nth-child(2) {
+    background-image: url("../img/girl1.PNG");
+}
+
 .bg:nth-child(3) {
-    background-image: url("../img/f-31.PNG");
+    background-image: url("../img/rf.jpg");
 }
 
 /* 文字 */
@@ -588,7 +588,7 @@ p {
 
     flex: 0 0 240px;
 
-    background: #ff60d7;
+    background: #fe70db;
 
     border-radius: 15px;
 
